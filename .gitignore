@@ -1,0 +1,13 @@
+# mac
+.DS_Store
+
+# LaTeX build files
+out/
+*.aux
+*.log
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.toc
+*.out
+*.pdf
