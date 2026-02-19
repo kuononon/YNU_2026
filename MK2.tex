@@ -1,0 +1,314 @@
+\section{理論}
+
+\subsection{磁性}
+大きさ$H$の磁場が印加されると、物質の磁化$M$は比例定数を用いて以下の等式を立てることができる。
+\begin{equation}\label{磁性}
+  M = \chi H
+\end{equation}
+ここで$\chi$は磁化率であり、この値が大きいほど磁化が大きいと評価される。
+
+\subsubsection{強磁性}
+強磁性は一般的に自発磁化を持つと知られている。図\ref{fig:ヒステリシス曲線}に示すように強磁性体の磁気特性は、ヒステリシス(履歴)を持ち消磁状態から徐々に磁場を強めていき、飽和するまで印加する。このとき$H = 0$付近の傾きは初磁化率$\chi_0$と呼ばれる。磁化が飽和した状態から磁場を反対方向に磁化が飽和するまで印加する。この時$H = 0$での磁化を残留磁化$M_{\text{r}}$、$M = 0$になった時の磁場を保磁力$H_\text{c}$、磁場$H$を大きくしていき一定になる磁化$M$は$M_\text{s}$と呼ばれる。
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{ヒステリシス曲線.pdf}
+  \caption{ヒステリシス曲線}
+  \label{fig:ヒステリシス曲線}
+\end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.6\textwidth]{強磁性.png}
+  \caption{強磁性}
+  \label{fig:強磁性}
+\end{figure}
+
+\subsubsection{反強磁性}
+反強磁性は隣り合う磁性原子のスピンが、図\ref{fig:反強磁性}のように反対の方向を向きお互いのスピンによる磁化を打ち消すことである。
+主に反強磁性体には\ce{MnO}などがある\cite{strong1948}。
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.6\textwidth]{反強磁性.png}
+  \caption{反強磁性}
+  \label{fig:反強磁性}
+\end{figure}
+
+\subsubsection{フェリ磁性}
+フェリ磁性は反強磁性と同様にスピンが反平行になるが、各スピンの大きさに偏りが生じると、正味の磁化が現れる。\\
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.6\textwidth]{フェリ磁性.png}
+  \caption{フェリ磁性}
+  \label{fig:フェリ磁性}
+\end{figure}
+
+フェリ磁性の代表的なものとしてフェライトが知られている\cite{strong1948}。スピネル型結晶構造の単位格子は、図\ref{fig:spinell}のような構造を有しており、4つの酸素イオンが正四面体を形成する四面体サイト(A-site)が8個と、6つの酸素イオンが正八面体を形成する八面体サイト(B-site)が16個で形成されている。
+フェライトの化学式は\ce{MFe2O4}で表される。\ce{M^{2+}}は2価の金属イオンであり、その種類によって異なるため、A-siteに入るものを正スピネル、B-siteに入るものを逆スピネルと分けることができる\cite{strong1948}。
+この構造はフェリ磁性を持つことが知られているが、これはA-siteのスピンとB-siteのスピンが、$\ce{O^{2-}}$イオンを媒介とした超交換相互作用が働くためである。
+B-site間でも超交換相互作用は働くが、その際にスピンが反平行に配列するかは、結合角度やどのサイト間の相互作用が支配的であるかによって異なる\cite{Goodenough1955,Kanamori1959,Anderson1950}。
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.7\textwidth]{スピネル構造.png}
+  \caption{スピネル構造}
+  \label{fig:spinell}
+\end{figure}
+
+
+
+\subsubsection{超常磁性}
+超常磁性体の磁化曲線は図\ref{fig:超常磁性} (a)に示すようにヒステリシスが消失する。
+これは一度磁化を飽和させても磁場を下げると、磁気異方性エネルギーが熱エネルギーを下回り、熱的揺らぎによりスピンの向きが不安定になり、平均の磁化が0になるためである。
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{超常磁性.png}
+  \caption{(a)超常磁性体の$M$-$H$ループ(b)超常磁性のイメージ図}
+  \label{fig:超常磁性}
+\end{figure}
+
+\subsubsection{超交換相互作用}
+多くの物質において磁気モーメントの配列は、磁気モーメント間に働く相互作用によって引き起こされる。ひとつは静磁エネルギーが、電子同士のスピンが反平行の時より平行の方が低くなる。もうひとつは、
+原子間の電子の移動はスピンが反平行の時のみ許されるというものである。原子$a,b$間の交換相互作用のハミルトニアン$\mathscr{H}_\text{ex}$は式\eqref{eq:交換相互作用}のようになる。\cite{strong1948}
+\begin{equation}\label{eq:交換相互作用}
+  \mathscr{H}_{\text{ex}} = -2J \symbfit{S}_a \cdot \symbfit{S}_b
+\end{equation}
+$J > 0$のとき原子$a,b$は平行である方がエネルギーが低く、$J < 0$のとき反平行である方がエネルギーが低くなる。超交換相互作用においては、$\ce{O^{2-}}$の$2p$軌道と磁性イオンの$3d$軌道が弱い共有結合を作り、
+マイナスのスピンは磁性イオンの軌道に移動する。この仕組みにより$\ce{O^{2-}}$を介して、磁性イオンは反平行に配列することになる。
+
+\subsection{単磁区構造}
+磁性体は原子磁石に注目すると、磁壁を生成し磁区を形成する。このとき、磁区の大きさは静磁エネルギーと磁壁のエネルギーに左右される。
+ここで静磁エネルギーとは、強磁性体自身が作る反磁場に対して、反対方向に作る磁化によるエネルギーである。静磁エネルギーは式\eqref{eq:静磁エネルギー}のように書ける\cite{strong1948}。
+\begin{equation}\label{eq:静磁エネルギー}
+ E_\text{d} = \frac{1}{2}\mu_0 D M^2
+\end{equation}
+ここで$D$は反磁場係数である。磁区が小さく互いに反平行を向くことで、静磁エネルギーは小さな値を取る。次に磁壁エネルギーとは磁区間の遷移層である。これは前述の通り、スピンの回転による
+交換エネルギーによるものであり、磁壁が多くなるほど磁壁エネルギーが大きくなる。異方性定数$K_1$を持つ場合、単位面積あたりの磁壁のエネルギー$r$は、
+係数$k$と交換スティフネス定数$A$を用いることで式\eqref{eq:磁壁エネルギー}のように表すことができる\cite{strong1948}。
+\begin{equation}\label{eq:磁壁エネルギー}
+  r = k \sqrt{AK_1}
+\end{equation}
+この二つのエネルギーの和が最小になるとき磁区の大きさが決まる。しかし単磁区構造は、磁壁を形成するよりもエネルギー的に安定である。
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=1.0\textwidth]{単磁区.png}
+  \caption{磁区構造による静磁エネルギーと磁壁エネルギー}
+  \label{fig:単磁区}
+\end{figure}
+このとき磁化過程は磁化の回転よる機構のみとなる。単磁区構造の臨界直径は$d_c$とかける。
+
+球状単磁区粒子における磁化の回転機構について考える。外部磁場$B_0$を印加し、磁化容易軸と角度$\theta_0$を成すように印加した。磁化は磁化容易軸から$\theta$だけ傾いているとすると、磁場中での磁気モーメントのエネルギーは
+式\eqref{磁気エネルギー}のように記述できる\cite{strong1948}。
+\begin{equation}\label{磁気エネルギー}
+  E(\theta) = K_{\text{u}}V\sin^2{\theta} - M_{\text{s}}VB_0\cos{(\theta - \theta_0)} + C
+\end{equation}
+ここで$K_{\text{u}}$は一軸磁気異方性定数、$V$は粒子の体積、$C$は定数である。このエネルギーを$\theta$で微分し、エネルギーを極小にする角度$\theta$を計算すると、
+\begin{equation}
+  \frac{dE(\theta)}{d\theta} = 2 K_u V \sin{\theta} \cos{\theta} + M_s V B_0 \sin{(\theta - \theta_0)} = 0
+  \label{微分磁気エネルギー}
+\end{equation}
+式\eqref{微分磁気エネルギー}を満たす角度$\theta$とわかる。この現象は単磁区構造における、ヒステリシス現象の機構の一つとなっている。単磁区粒子の磁化容易軸はランダムな方向分布を持つ場合、全体の磁化曲線は磁化容易軸$\theta_0$のヒステリシス曲線の重ね合わせとして得られる。よって単磁区粒子においてもヒステリシス曲線が現れることになる。
+
+\subsection{磁気緩和現象}
+ナノ微粒子の磁気緩和現象では、Néel緩和とBrown緩和の2つが知られている。Néel緩和とは超常磁性体が熱エネルギーによって、粒子内で磁化がランダムに回転する機構である。
+ここでの緩和時間は式\eqref{eq:ネール}で表される。
+\begin{equation}\label{eq:ネール}
+  \tau_\text{N} = \tau_0 \exp{\left(\frac{K V}{k_\textrm{B} T}\right)}
+\end{equation}
+ここで$\tau_N$はNéel緩和時間、$K$は磁気異方性定数、$V$は粒子の体積、$k_\textrm{B}$はボルツマン定数、$T$は絶対温度である。
+Brown緩和は液体中に分散したナノ微粒子で起こり、緩和時間は式\eqref{eq:ブラウン}で表される。
+\begin{equation}\label{eq:ブラウン}
+  \tau_\text{B} = \frac{3 \eta V_h}{k_\textrm{B} T}
+\end{equation}
+ここで$\tau_\text{B}$はBrown緩和時間、$\eta$は流体粘度、$V_h$は粒子の流体力学的体積である。
+
+
+\subsection{逆ヒステリシス現象}
+逆ヒステリシスという現象は図\ref{fig:逆ヒステリシス}のような負の残留磁化を持つ特徴的なヒステリシスループとして数多く観察されている。
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=1.0\textwidth]{逆ヒステリシス.pdf}
+  \caption{逆ヒステリシスループ}
+  \label{fig:逆ヒステリシス}
+\end{figure}
+Yangらは、\ce{Co}ナノ微粒子を用いた粒子間相互作用による、逆ヒステリシスループについて報告している\cite{Yang2008}。試料作製では、レーザー照射を行うことで粒径の小さい超常磁性相を持つものと、
+粒径の大きな強磁性相を持つものが混在する系を作製した。この試料での磁化過程を、4つの仮定とStoner-Wohlfarthモデルに基づいて説明する\cite{Stoner1948}。４つの仮定は、
+\begin{enumerate}
+  \renewcommand{\labelenumi}{(\roman{enumi})}
+  \item 2つの異なる磁性相は、粒径が大きい強磁性の\ce{Co}ナノ微粒子(sample-LG)と粒径の小さい超常磁性相の\ce{Co}ナノ微粒子(sample-SM)に起因する。
+  \item sample-LGの周囲に存在するsample-SMの総磁化($M_\text{SM}$)は単一のsample-LGの磁化($M_\text{LG}$)よりも大きい
+  \item sample-LGの磁化には大きな磁気異方性を持つ
+  \item sample-LGの粒子間距離は長いためsample-LG間に相互作用は働かない
+\end{enumerate}
+Stoner-Wohlfarthモデルに基づいて説明すると、系の総エネルギーは下式のようになる\cite{Stoner1948}。
+\begin{align}
+E ={}&
+ - M_{\text{SM}} V_{\text{SM}} H \cos(\theta_\text{SM}-\theta_\mathit{H})
+ - M_\text{LG} V_\text{LG} H \cos(\theta_\text{LG}-\theta_\mathit{H}) \notag\\
+&+ K_\text{SM} V_\text{SM} \sin^2 \theta_\text{SM}
+ + K_\text{LG} V_\text{LG} \sin^2 \theta_\text{LG} \notag\\
+&- J_{\mathrm{eff}} M_\text{SM} M_\text{LG}
+ \cos(\theta_\text{SM}-\theta_\text{LG})
+\label{eq:total_energy}
+\end{align}
+
+ここで、$V_\text{SM}、V_\text{LG}$はsample-SMとsample-LGの体積、$K_\text{SM}、K_\text{LG}$はsample-SMとsample-LGの磁気異方性定数、$\theta_\text{SM}、\theta_\text{LG}$はsample-SMとsample-LGの磁化方向
+$\theta_H$は外部磁場の方向と磁化容易軸との間の角度、$J_\text{eff}$は粒子間の有効交換相互作用定数である。このとき系のエネルギーが極小となるのは下記に示すように4つの条件である。
+\begin{enumerate}
+  \renewcommand{\labelenumi}{(\roman{enumi})}
+  \item $\theta_\text{SM} = 0 ,\theta_\text{LG} = 0$
+  \item $\theta_\text{SM} = 0 ,\theta_\text{LG} = \pi$
+  \item $\theta_\text{SM} = \pi ,\theta_\text{LG} = 0$
+  \item $\theta_\text{SM} = \pi ,\theta_\text{LG} = \pi$
+\end{enumerate}
+これらの条件を用いて逆ヒステリシスループを説明していく。まず磁化が飽和する十分大きな正の磁場を印加したとき、全ての\ce{Co}ナノ微粒子は磁場方向に磁化し、(i)の状態をとる。
+次に磁化を弱めていく過程で系の総エネルギーを低くするため、sample-SMはsample-LGによる反磁場により磁場と反対方向に磁化し、(ⅲ)の状態をとる。このときの全体の総磁化は下式のようになる。
+\begin{equation}\label{eq:負の残留磁化}
+  |M_{LG}| - |M_{SM}| \le 0
+\end{equation}
+式\eqref{eq:負の残留磁化}より磁場方向と反対の磁化を持つsample-SMの方が、磁化が大きいため負の残留磁化を持つことがわかる。
+次に十分大きな負の磁場を印加した際、全ての\ce{Co}ナノ微粒子は磁場方向に印加し、(ⅳ)の状態をとる。
+次に磁化を弱めていく過程で系の総エネルギーを低くするため、sample-SMとsample-LGの反磁場により磁場と反対方向に磁化し、(ⅱ)の状態をとる。
+この時正の磁場を弱めた時と同様の現象が起き負の残留磁化を示す。このような超常磁性相と強磁性相の粒子間相互作用により、反強磁性的双極子相互作用が粒子間に働くため、逆ヒステリシスループが生じるとわかる。
+
+\subsection{磁気共鳴イメージング(MRI)}
+\label{sec:MRI}
+\subsubsection{MRIの概要}
+Magnetic Resonance Imaging(MRI)は、核磁気共鳴(NMR)を利用している。主に水素の原子核の励起、緩和を利用している。\\
+MRI装置の概要を図\ref{fig:MRI_overview}にしめす。磁石及び交流磁場コイルで測定対象に磁場を加え、対象の原子核を歳差運動させる。このとき歳差運動と同じ周波数である、Radio Frequency Pulse(RFパルス)を
+照射することで励起される。緩和過程において、RFコイルに対象の原子核の磁気モーメントによる誘導電流が生じる。この電流を変換することで核磁気共鳴画像を得ることができる\cite{KitaokaMRI}。\\ 
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{MRI概略図.png}
+  \caption{MRIの概要}
+  \label{fig:MRI_overview}
+\end{figure}
+\subsubsection{核磁気共鳴}
+電子または原子核のスピン$\symbfit{I}$に対応する磁気モーメントは以下の式になる\cite{KitaokaMRI}。
+\begin{equation}
+  \symbf{\mu} = \gamma \hbar \symbfit{I}
+\end{equation}
+ここで、$\mu$は磁気モーメント、$\gamma$は磁気回転比、$\symbfit{I}$はスピン角運動量、$\hbar$換算プランク定数である。\\
+これに外部磁場$\symbfit{B_0}$が加わると、トルク$\symbfit{\mu} \times \symbfit{B_0}$を生じ、以下のような運動方程式に従って運動する。
+\begin{equation}
+  \hbar \frac{d\symbfit{I}}{dt} = \frac{1}{\gamma} \frac{d\symbf{\mu}}{dt} = \symbf{\mu} \times \symbfit{B_0}
+\end{equation} 
+磁場の方向を$z$軸方向にとると
+\begin{equation}
+  \frac{d\mu_x}{dt} = \gamma B_0 \mu_y, \quad \frac{d\mu_y}{dt} = - \gamma B_0 \mu_x, \quad \frac{d\mu_z}{dt} = 0
+\end{equation}
+となるので一般解は以下の式になる。
+\begin{equation}
+  \mu_x = A \cos (\omega_0 + \alpha), \mu_y = A \sin (\omega_0 + \alpha),\quad \mu_z = \text{const.}
+\end{equation}
+この式から、磁気モーメントは外部磁場の周りを角周波数$\omega_0 = \gamma B_0$で回転運動することがわかる。これをラーモアの歳差運動という\cite{KitaokaMRI}。
+
+磁場中での磁気モーメントのエネルギーは
+\begin{equation}
+  U = - \symbf{\mu} \cdot \symbfit{B_0} = -\mu_z B_0 = - \gamma \hbar B_0 J_z
+\end{equation}
+となる。ここで$J_z$のとりうる値は$-m, -m+1, \ldots, m-1, m$であり、これをゼーマン準位と呼ぶ\cite{KitaokaMRI}。ここで$m$はスピン量子数と呼ぶ。隣り合う準位間のエネルギー差は
+\begin{equation}
+  |\Delta U| = |\gamma \hbar B_0| = |\hbar \omega_0|
+\end{equation}
+となっている。これはラーモア周波数に等しい振動数の電磁波のエネルギーがゼーマンエネルギー準位の差に等しいため、磁気モーメントがこの電磁波を吸収して高エネルギー準位に遷移する。この現象を核磁気共鳴(NMR)という。\\
+
+電磁波を照射する前では、磁気モーメントは巨視的磁化$M$の成分は上向と下向きの磁気モーメントの個数の差により$z$軸正の向きに磁化が生じる。$x$-$y$平面内では磁気モーメントが様々な位相で歳差運動をしているため、$x$-$y$平面内の巨視的な磁化はゼロである。\\
+核磁気共鳴(NMR)は、外部磁場中でスピンを持つ原子核が特定の周波数で共鳴吸収を示す現象です。\\
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.6\textwidth]{MRI.png}
+  \caption{核磁気共鳴(NMR)とラーモアの歳差運動の概略図}
+  \label{fig:MRI}
+\end{figure}
+
+励起電磁波による巨視的磁化の運動を考えるため、$z$軸を軸に$\omega_0$で回転する回転座標系$x'$-$y'$-$z'$を導入する。磁化$M$は磁気モーメントの$\mu$の集合なので、$\symbfit{M}$と磁化の角運動量$\symbfit{L_M}$は、
+\begin{equation}
+  \symbfit{M} = \gamma \symbfit{L_M}
+\end{equation}
+となる。励起電磁波による磁界成分を$\symbfit{B_1}$とすると、トルク$\symbfit{\mu} \times \symbfit{B_1}$により運動方程式は
+\begin{equation}
+  \frac{d\symbfit{M}}{dt} = \gamma [\symbfit{M} \times \symbfit{B_1}],\frac{d\symbfit{L_M}}{dt} = [\symbfit{M} \times \symbfit{B_1}]
+\end{equation}
+となる。ここで、$\symbfit{B_1}$は$x-y$平面内にある交流磁場であり、$\symbfit{B_1} = B_1(\cos \omega t \symbfit{i}$ + $\sin \omega t \symbfit{j})$($\symbfit{i}$は$x$軸の単位ベクトル、$\symbfit{j}$は$y$軸の単位ベクトル)で表される。\\
+回転座標系での磁化の時間変化は以下の式で与えられる。
+\begin{equation}  
+  \left(\frac{d\symbfit{M}}{dt}\right)_{\text{rot}} = \gamma [\symbfit{M} \times \symbfit{B_1}] - [\symbfit{\omega_0} \times \symbfit{M}]
+\end{equation}
+ここで$\symbfit{M}=({M_x},{M_y},{M_z})$、$\symbfit{B_1}=(B_1,0,0)$、$T=0$で$\symbfit{M}=\symbfit{M_0}$で解くと、
+\begin{equation}
+  M_x' = 0,M_y' = M_0\cos(\gamma B_1t),M_z' = -M_0\sin(\gamma B_1t)
+\end{equation}
+となる。これはx軸は中心に$M$が倒れていくことを示している。固定座標系では$M$は$\omega_0$で回転しながら倒れる角度は
+\begin{equation}
+  \theta = \gamma B_1 t
+\end{equation}
+で与えられる。つまり$B_1$の大きさを一定にすれば$\theta$ は電磁波の照射時間を$t$で決まる。この$\theta$ をフリップ角という。フリップ角\qty{90}{\degree}の電磁波を\qty{90}{\degree}パルス、フリップ角\qty{180}{\degree}の電磁波を\qty{180}{\degree}パルスと呼ぶ\cite{KitaokaMRI}。
+
+\subsubsection{磁気緩和}
+励起電磁波照射後、フリップ角$\theta$まで励起された時の$\symbfit{M}$の成分は固定座標系で
+\begin{equation}
+  M_{x-y} = M_0 \sin \theta ,M_z = M_0 \cos \theta
+\end{equation}
+であり$(M_z,M_{x-y})=(M_0,0)$になるまでの過程を緩和という。それぞれの成分の時間成分は以下の式になる。
+\begin{equation}
+  M_{x-y} = M_0 \sin \theta \exp\left(-t/T_2\right), M_z = M_0 - (M_0 - M_0 \cos \theta)\exp\left(-t/T_1\right)
+\end{equation}
+ここで縦緩和時間$T_1$は、$z$軸成分$M_z$が$M_0$に戻るまでの時間を表し、横緩和時間$T_2$は$x$-$y$平面内の成分$M_{x-y}$が0になるまでの時間し、どちらも緩和時間と呼ばれる時定数である。
+$T_1$緩和は$\beta$群(高エネルギー準位)から$\alpha$群(低エネルギー準位)への遷移、$T_2$緩和は歳差運動の位相の分散で説明される\cite{KitaokaMRI}。
+
+\subsection{Spin Echo法によるMRI測定} %石川　宮野　神田　小池　三池　坂井
+\subsubsection{パルスシーケンス}
+MRIには前節で述べたような\qty{90}{\degree}パルス,\qty{180}{\degree}パルスを組み合わせ、どのパルスをいつ照射するかを表したパルスシーケンスが必要になる。
+
+パルスシーケンスには、Spin Echo,Fast Spin Echoなど様々な種類があり、それぞれ得られるMR画像や測定に要する時間が変わる\cite{KitaokaMRI}。臨床においては、どのパルスシーケンスを使うかも重要である。\\
+\subsubsection{Spin Echo法}
+Spin Echo法はMRIにおける基本的なパルスシーケンスであり、\qty{90}{\degree},\qty{180}{\degree}パルスの2種類を用いられる。設定する変数はエコー時間(TE:Echo Time)とリピート時間(TR:Repetition Time)である。
+TEは\qty{90}{\degree}パルス照射から信号を取得するまでの時間、TRは\qty{90}{\degree}パルスと次の\qty{90}{\degree}パルスの間隔である。ここでTEを$t_\text{TE}$、TRを$t_\text{TR}$と表す。
+まず$t = 0$において\qty{90}{\degree}パルスを照射し、次に$t = \frac{t_\text{TE}}{2}$にて\qty{180}{\degree}パルス、最後に $t = t_\text{TR}$にて\qty{90}{\degree}パルスが照射される。
+これがSpin Echo法の一回分の測定である。実際には信号強度を強めるためにこの一回分の測定を複数回繰り返し行い、MRシグナルを積算していく。
+Spin Echo法のパルスシーケンスを図\ref{fig:SpinEcho}に示す。\\
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.9\textwidth]{MRI_spin-echo.png}
+  \caption{Spin Echo法のパルスシーケンス}
+  \label{fig:SpinEcho}
+\end{figure}
+\subsubsection{Spin Echo法によるT1, T2強調画像}
+このようにして得られたSpin Echo法のMRシグナルではその強度が以下の式で表されることが知られている\cite{KitaokaMRI}。
+\begin{equation}
+  I_\text{SE} = c \cdot \rho \cdot \exp\left(-\frac{t_\text{TE}}{T_2}\right) \cdot \left(1 - \exp\left(-\frac{t_\text{TR}}{T_1}\right)\right)
+\end{equation}\label{MRシグナル}
+ここで$\rho$は断層面内のプロトン密度、$c$は測定状況に依存する環境定数である。
+
+$t_\text{TE}=0$に設定するのは原理上不可能であるため、実際には$t_\text{TE} \ll t_\text{TR}$となる値を設定することで(24)式は以下のようになる。
+\begin{equation}
+  I_\text{SE} = c \cdot \rho \cdot \left(1 - \exp\left(-\frac{t_\text{TR}}{T_1}\right)\right)
+\end{equation}
+これが$T_1$緩和曲線の理論式である。臨床においても同じように$T_1$強調画像を得られる。また、この時、$T_1$の逆数を取った値を緩和率$R_1$と呼ぶ。
+
+次に$t_\text{TR} = \infty(t_\text{TR} \gg t_\text{TE})$とした場合を考える。このとき(24)式は以下のようになる。
+\begin{equation}
+  I_\text{SE} = c \cdot \rho \cdot \exp\left(-\frac{t_\text{TE}}{T_2}\right)
+\end{equation}
+これが$T_2$緩和曲線の理論式であり$T_2$強調画像を得られる。また、この時$T_2$の逆数をとった値を緩和率$R_2$とよび、造影効果を表すパラメータである。
+
+また$t_\text{TR} \gg T_1$、$t_\text{TE} \ll T_2$と設定すると、(24)式は以下のようになる。
+\begin{equation}\label{eq:MRIシグナル}
+  I_\text{SE} = c \cdot \rho 
+\end{equation}
+この式は$T_1$、$T_2$緩和の影響を排除した\ce{^1H}のMRシグナルであり、プロトン密度強調画像を得られる。
+
+このようにSpin Echo法を用いることで様々な強調像を得られ、基本的なMRI撮像の基本的なシーケンスとして使われる\cite{KitaokaMRI}。
+
+\clearpage
+
+\subsection{磁気ナノ微粒子イメージング(MPI)}
+\subsubsection{MPIの概要}
+\begin{figure}{H}
+  \centering
+  \includegraphics[width=1.0\textwidth]{MPI.pdf}
+  \caption{MPIの概要}
+  \label{fig:MPI_overview}
+\end{figure}
+Magnetic Particle Imaging(MPI)は2005年にB. GleichとJ. Weizeneckerによって提案されたイメージング手法である\cite{Gleich2005}。
+MPIは超常磁性ナノ微粒子の非線形的な磁気特性を利用したものであり、外部から交流磁場を印加すると、ナノ微粒子の磁化はLangevin関数に従って応答し、
+高磁場強度において磁化が飽和するため、短形波のような磁化応答を示す\cite{Gleich2005}。この短形波をフーリエ変換し、MPIシグナルとして基本波の3倍の周波数応答である、
+第三高調波応答のシグナルを用いる。

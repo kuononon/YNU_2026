@@ -1,0 +1,95 @@
+\documentclass[a4paper,11pt]{jlreq}%日本語文書クラス
+
+\usepackage{luatexja-fontspec}%日本語フォント指定
+\setmainfont{Harano Aji Mincho}%本文フォント
+\usepackage{amsmath,amssymb}%数式関連
+\usepackage{unicode-math}%数式フォント指定
+\usepackage[version=4]{mhchem}%化学式
+\usepackage{graphicx}%画像挿入
+\setmathfont{Latin Modern Math}%%数式フォント
+\newcommand{\ctext}[1]{\raise0.2ex\hbox{\textcircled{\scriptsize{#1}}}}%丸囲み数字
+\newcommand{\Resovist}{Resovist\textsuperscript{\textregistered}}
+\usepackage{siunitx}%
+\DeclareSIUnit\Oe{Oe}
+\sisetup{
+  range-phrase = --,
+  range-units = single
+}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage[numbers]{natbib}
+
+
+
+
+
+
+\begin{document}
+
+\vspace{1pt}
+
+\begin{center}
+\vspace{20mm}
+{\large\noindent 令和7年度 \\
+卒業論文}\\
+\vspace{60mm}
+{\Huge\noindent\textbf{イメージング用トレーサーとしての}}\\
+\medskip
+{\Huge\noindent\textbf{GdドープMn-Zn ferriteの作製と磁気緩和特性}}\\
+\vspace{\baselineskip}
+\vspace{60mm}
+
+{\Large\noindent
+横浜国立大学 理工学部\\
+数物・電子情報系学科 物理工学EP\\
+
+一柳研究室\\
+2264241 三浦 玖遠\\
+}
+\vspace{40mm}
+\end{center}
+\thispagestyle{empty}
+
+\clearpage
+\vspace*{\fill}
+\begin{abstract}
+磁性ナノ微粒子は超常磁性などの特有な磁気特性を持つ。近年では医療応用に向けて、これらの特性を活かした磁性ナノ微粒子の研究が行われている。
+本研究は、Gd をドープしたMn-Zn ferriteナノ微粒子を、本研究室独自の湿式混合法を用いて作製した。組成は$\ce{Mn_{0.8-x}Zn_{0.2}Gd_{x}Fe2O4}$
+を採用し、Gdドープ量を変え、さらに焼成温度を調整することで粒径を制御した。磁気粒子イメージング(MPI:Magnetic Particle Imaging)、
+磁気共鳴イメージング(MRI:Magnetic Resonance Imaging)の新規造影剤の開発を行った。
+
+XRD測定から、Gdドープ量$x≤0.08$においてスピネル構造を確認した。しかし、ドープ量$x≥0.09$では不純物相のピークが確認された。
+また、角度分解能を上げピークシフトを測定すると、ピークが$x=0.08$付近まで低角側にシフトした。これは他の金属イオンと比べて、
+イオン半径が大きいGdがドープされ、格子定数が増加したことを示唆している。これらの結果より、一定のドープ量を超えるとGdの固溶限界に達し、
+不純物が生成されることを示した。
+
+磁化測定から、作製したサンプルが超常磁性的挙動を示すことが確認された。また、ドープ量の増加に伴い飽和磁化$M_\text{s}$、初透磁率$μ_0$が増加することを確認した。
+さらに$x=0.06$のサンプルを、粒径別に温度を\qtyrange{150}{350}{K}の範囲で変化させて、交流磁化率の温度依存性を測定した。測定結果より、
+粒径\qty{14.1}{nm}のサンプルが体温(\qty{310}{K})において最大の交流磁化率実数部$\chi'$を示した。
+
+MPIシグナルである第三高調波測定は駆動磁場コイルで交流磁場を印加し、ピックアップコイルを用いることによってサンプルからの第三高調波応答を読み取った。
+測定結果より最も大きな初透磁率$μ_0$を示す、$x=0.06$のサンプルが最大の応答強度を示した。
+
+MRI測定では、$x=0.06$のサンプルがどれも寒天より高い$T_1$緩和能$R_1$を示した。これは高い有効磁気モーメントを持つ\ce{Gd}をドープしたことに起因し、
+MRIでの撮像の際にコントラストの向上を期待できる。
+\end{abstract}
+\vspace*{\fill}
+\clearpage
+
+
+\include{MK1}
+
+\include{MK2}
+
+\include{MK3}
+
+\include{MK4}
+
+\include{MK5}
+
+\bibliographystyle{naturemag} 
+\bibliography{MK6}
+
+\include{MK7}
+
+\end{document}
