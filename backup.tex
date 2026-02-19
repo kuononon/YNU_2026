@@ -1,0 +1,314 @@
+\title{タイトル未定}
+\author{三浦　玖遠}
+\date{\today}
+\maketitle
+
+
+\tableofcontents
+
+\part{1. 諸元}
+\section{諸元}
+\subsection{研究背景}
+\subsubsection{ナノテクノロジー}
+ナノテクノロジーは、物質をナノメートル（10億分の1メートル）スケールで操作・制御する技術です。\\
+この技術により、材料の特性を向上させたり、新しい機能を持つ製品を開発したりすることが可能となります。  \\
+ナノテクノロジーは、医療、エレクトロニクス、エネルギー、環境など、さまざまな分野で応用されています。
+\paragraph{これは段落}
+\subparagraph{これこそが小段落}
+\subsection{研究の目的}
+
+\section{理論}
+\subsection{磁性体}
+\subsubsection{磁性の種類}
+磁性とは、物質が磁場に対して示す反応のことを指します。\\
+磁性には主に以下の種類があります。\\
+\begin{itemize}
+  \item 強磁性: 鉄、コバルト、ニッケルなどの物質が持つ磁性で、外部磁場がなくても磁化を維持します。
+  \item 反磁性: 一部の物質が持つ磁性で、外部磁場に対して反発する性質を持ちます。
+  \item 常磁性: 一部の物質が持つ磁性で、外部磁場に対して引き寄せられる性質を持ちます。
+双極子相互作用: 磁性体内の原子や分子が持つ磁気双極子が互いに影響し合う現象です。 
+キュリー温度: 強磁性体が常磁性体に変わる温度のことを指します。
+キュリーワイスの法則: 常磁性体の磁化率が温度に反比例することを示す法則です。  
+異方性エネルギーの式は以下のように表されます。
+\begin{equation}
+  E = K_1 \sin^2\theta + K_2 \sin^4\theta + \ldots
+\end{equation}
+ここで、$E$は異方性エネルギー、$K_1$および$K_2$は異方性定数、$\theta$は磁化ベクトルと特定の結晶軸とのなす角を表します。 
+
+\end{itemize}
+
+\newpage
+
+\subsection{MRI}
+\label{sec:MRI}
+\subsubsection{MRIの概要}
+　MRI(Magnetic Resonance Imaging)は、核磁気共鳴(NMR)を利用している。主に水素の原子核の励起、緩和を利用している。\\
+MRI装置の概要を図にしめす。磁石及び交流磁場コイルで測定対象に磁場を加え、対象の原子核を歳差運動させる。このとき歳差運動と同じ周波数であるRFパルスを
+照射することで励起される。緩和過程において、RFコイルに対象の原子核の磁気モーメントによる誘導電流が生じる。この電流を変換することで核磁気共鳴画像を得ることができる。\\ 
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{MRI_overview.png}
+  \caption{MRIの概要}
+  \label{fig:MRI_overview}
+\end{figure}
+\subsubsection{核磁気共鳴}
+　電子または原子核のスピン$\symbfit{J}$に対応する磁気モーメントは以下の式になる。
+\begin{equation}
+  \symbf{\mu} = \gamma \hbar \symbfit{J}
+\end{equation}
+ここで、$\mu$は磁気モーメント、$\gamma$は磁気回転比、$\symbfit{J}$はスピン角運動量である。\\
+これに外部磁場$\symbfit{B_0}$が加わると、トルク$\symbfit{\mu} \times \symbfit{B_0}$を生じ、以下のような運動方程式に従って運動する。
+\begin{equation}
+  \hbar \frac{d\symbfit{J}}{dt} = \frac{1}{\gamma} \frac{d\symbf{\mu}}{dt} = [\symbf{\mu} \times \symbfit{B_0}]
+\end{equation} 
+磁場の方向をz軸方向にとると
+\begin{equation}
+  \frac{d\mu_x}{dt} = \gamma B_0 \mu_y, \quad \frac{d\mu_y}{dt} = - \gamma B_0 \mu_x, \quad \frac{d\mu_z}{dt} = 0
+\end{equation}
+となるので一般解は以下の式になる。
+\begin{equation}
+  \mu_x = A \cos (\omega_0 + \alpha), A \cos (\omega_0 + \alpha),\quad \mu_z = const
+\end{equation}
+この式から、磁気モーメントは外部磁場の周りを角周波数$\omega_0 = \gamma B_0$で回転運動することがわかる。これをラーモアの歳差運動という。\\
+　磁場中での磁気モーメントのエネルギーは
+\begin{equation}
+  U = - \symbf{\mu} \cdot \symbfit{B_0} = -\mu_z B_0 = - \gamma \hbar B_0 J_z
+\end{equation}
+となる。ここで$J_z$のとりうる値は$-J, -J+1, \ldots, J-1, J$であり、これをぜーマン準位と呼ぶ。隣り合う準位間のエネルギー差は
+\begin{equation}
+  |\Delta U| = |\gamma \hbar B_0| = |\hbar \omega_0|
+\end{equation}
+となっている。これはラーモア周波数に等しい振動数の電磁波のエネルギーがゼーマンエネルギー準位の差に等しいため、磁気モーメントがこの電磁波を吸収して高エネルギー準位に遷移する。この現象を核磁気共鳴(NMR)という。\\
+　電磁波を照射する前では、磁気モーメントは巨視的磁化$M$の成分は上向と下向きの磁気モーメントの個数の差によりz軸正の向きに磁化が生じる。x-y平面内では磁気モーメントがバラバラの位相で歳差運動をしているため、x-y平面内の巨視的な磁化はゼロである。\\
+核磁気共鳴(NMR)は、外部磁場中でスピンを持つ原子核が特定の周波数で共鳴吸収を示す現象です。\\
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.6\textwidth]{MRI.png}
+  \caption{Gdドープ量が異なる各サンプルのXRDパターン}
+  \label{fig:MRI}
+\end{figure}
+　励起電磁波による巨視的磁化の運動を考えるため、z軸を軸に$\omega_0$で回転する回転座標系系x'-y'-z'を導入する。磁化$M$は磁気モーメントの$\mu$の集合なので、$\symbfit{M}$と磁化の角運動量$\symbfit{L_M}$は、
+\begin{equation}
+  \symbfit{M} = \gamma \symbfit{L_M}
+\end{equation}
+となる。励起電磁波による磁界成分を$\symbfit{B_1}$とすると、トルク$\symbfit{\mu} \times \symbfit{B_1}$により運動方程式は
+\begin{equation}
+  \frac{d\symbfit{M}}{dt} = \gamma [\symbfit{M} \times \symbfit{B_1}],\frac{d\symbfit{L_M}}{dt} = [\symbfit{M} \times \symbfit{B_1}]
+\end{equation}
+となる。ここで、$\symbfit{B}$は外部磁場であり、$\symbfit{B} = \symbfit{B_0} + \symbfit{B_1}$である。$\symbfit{B_1}$はx-y平面内にある交流磁場であり、$\symbfit{B_1} = B_1(\cos \omega t \symbfit{i}$ + $\sin \omega t \symbfit{j})$で表される。\\
+回転座標系での磁化の時間変化は以下の式で与えられる。
+\begin{equation}  
+  \left(\frac{d\symbfit{M}}{dt}\right)_{rot} = \gamma [\symbfit{M} \times \symbfit{B}] - [\symbfit{\omega_0} \times \symbfit{M}]
+\end{equation}
+ここで$\symbfit{M}=({M},{M_y},{M_Z})$、$\symbfit{B_1}=(B_1,0,0)$、$T=0$で$\symbfit{M}=\symbfit{M_0}$で解くと、
+\begin{equation}
+  M_x' = 0,M_y' = M_0\cos(\gamma B_1t),M_z' = -M_0\sin(\gamma B_1t)
+\end{equation}
+となる。これはx軸は中心に$M$が倒れていくことを示している。固定座標系では$M$は$\omega_0$で回転しながら倒れ倒れる角度は
+\begin{equation}
+  \theta = \gamma B_1 t
+\end{equation}
+で与えられる。つまり$B_1$の大きさを一定にすれば$\theta$ は電磁波の照射時間を$t$で決まる。この$\theta$ をフリップ角という。フリップ角90°の電磁波を90°パルス、フリップ角180°の電磁波を180°パルスと呼ぶ。\\
+
+\subsubsection{磁気緩和}
+　励起電磁波照射後、フリップ角$\theta$まで励起された時の$\symbfit{M}$の成分は固定座標系で
+\begin{equation}
+  M_{x-y} = M_0 \sin \theta ,M_z = M_0 \cos \theta
+\end{equation}
+であり$(M_z,M_{x-y})=(M_0,0)$になるまでの過程を緩和という。それぞれの成分の時間成分は以下の式になる。
+\begin{equation}
+  M_{x-y} = M_0 \sin \theta e^{-t/T_2}, M_z = M_0 - (M_0 - M_0 \cos \theta)e^{-t/T_1}
+\end{equation}
+ここで縦緩和時間$T_1$は、z軸成分$M_z$が$M_0$に戻るまでの時間を表し、横緩和時間$T_2$はx-y平面内の成分$M_{x-y}$が0になるまでの時間し、どちらも緩和時間と呼ばれる時定数である。
+$T_1$緩和は$\beta$群(高エネルギー準位)から$\alpha$群(低エネルギー準位)への遷移、$T_2$緩和は歳差運動の位相の分散で説明される。\\
+　水素原子核同士の陽子-陽子相互作用によって生じる局所揺動磁場$\Delta D$により緩和が起こる。この現象は水素原子核周辺に同じ水分子内の
+水素原子核以外に磁性体が存在しない場合に起こる。それぞれの大きさは以下の式で表される。
+\begin{equation}
+  (p-pDDI) \propto \frac{\mu_p^2}{r^6}
+\end{equation}
+\begin{equation}
+  \Delta D = \pm \frac{\mu_0 \mu_p}{2\pi r^3}
+\end{equation}
+
+横緩和は、局所揺動磁場$\Delta D$により歳差運動の位相がずれることで起こる。1.2式より歳差運動の角周波数を外部磁場と局所揺動磁場を考慮に入れると以下の式で表される。\\
+\begin{equation}
+  \omega = \gamma (B_0 + \Delta D) 
+\end{equation}
+
+\subsection{Spin Echo法によるMRI測定}
+\subsubsection{パルスシーケンス}
+　MRIには章\ref{sec:MRI}で述べたような90°パルス,180°パルスを組み合わせどのパルスをいつ照射するかを表したパルスシーケンスが必要になる。
+　パルスシーケンスには、Spin Echo,Fast Spin Echoなど様々な種類があり、それぞれ得られるMR画像や測定に要する時間が変わる。臨床においてはどのパルスシーケンスを使うかも重要である。\\
+\subsubsection{Spin Echo法}
+　Spin Echo法はMRIにおける基本的なパルスシーケンスであり、90°,180°パルスの2種類を用いられる。設定する変数はエコー時間(TE:Echo Time)とリピート時間(TR:Repetition Time)である。
+TEは90°パルス照射から信号を取得するまでの時間、TRは90°パルスと次の90°パルスの間隔である。まず$t = 0$において90°パルスを照射し、次に$t = TE/2$にて180°パルス、最後に $t = TR$にて90°パルスが照射される。
+これがSpin Echo法の一回分の測定である。実際には信号強度を強めるためにこの一回分の測定を複数回繰り返し行い、MRシグナルを積算していく。
+Spin Echo法のパルスシーケンスを図\ref{fig:SpinEcho}に示す。\\
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.9\textwidth]{MRI_spin-echo.png}
+  \caption{Spin Echo法のパルスシーケンス}
+  \label{fig:SpinEcho}
+\end{figure}
+\subsubsection{Spin Echo法によるT1, T2強調画像}
+このようにして得られたSpin Echo法のMRシグナルではその強度が以下の式で表されることが知られている。
+\begin{equation}
+  I_SE = N \cdot K \cdot exp(-\frac{TE}{T_2}) \cdot (1 - 2exp(-\frac{TR-TE}{2T_1}) + exp{-\frac{TR}{T_1}}
+  \label{MRシグナル}
+\end{equation}
+ここでNはスキャンの積算回数、Kは測定状況に依存する環境定数である。
+　$仮にTE=0$としてみると、\ref{eq:MRシグナル}式は以下のようになる。
+\begin{equation}
+  I_SE = N \cdot K \cdot (1 - exp(-\frac{TR}{T_1}))
+\end{equation}
+この式から$T_2$緩和の影響を排除したMRシグナルが得られることがわかる。TE=0に設定するのは原理状不可能であるため、
+実際には$TE \ll TR$となる値を設定することで以下の式に変形できる。
+\begin{equation}
+  I_SE \approx N \cdot K \cdot exp(-\frac{TE}{T_2}) \cdot (1 - exp(-\frac{TR}{T_1}))
+\end{equation}
+これが$T_1$緩和曲線の理論式である。臨床においても同じように$T_1$強調画像を得られる。
+　次に$TR = \infty(TR \gg TE)$とした場合を考える。このとき\ref{eq:MRIシグナル}式は以下のようになる。
+\begin{equation}
+  I_SE = N \cdot K \cdot exp(-\frac{TE}{T_2})
+\end{equation}
+これが$T_2$緩和曲線の理論式であり$T_1$強調画像を得られる。また、この時$T_2$の逆数をとった値を$R_2$とよび、造営効果を表すパラメータである。
+　また$TR \gg T_1$、$TE \ll T_2$と設定すると、ref{eq:MRIシグナル}式は以下のようになる。
+\begin{equation}
+  I_SE = N \cdot K 
+\end{equation}
+この式は$T_1$、$T_2$緩和の影響を排除した${}^{1}H$MRシグナルであり、プロトン密度強調画像を得られる。
+　このようにSpin Echo法を用いることで様々な強調は像を得られ、最も基本的なMRI撮像の基本的なシーケンスとして使われる。
+
+
+
+
+
+\section{実験}
+\subsubsection{磁性ナノ微粒子作製}
+本研究で作製したサンプルを表\ref{tbl:SampleList}に示す。
+\begin{table}
+  \caption{\textbf{本研究で作製したGdドープ量別サンプルの一覧}}\label{tbl:SampleList}
+  \centering
+  \begin{tabular}{l|ccccccccccc}
+    \hline
+    サンプル名 & Gd-0 & Gd-1 & Gd-2 & Gd-3 & Gd-4 & Gd-5 & Gd-6 & 
+    Gd-7 & Gd-8 & Gd-9 & Gd-20 \\
+    \hline
+    Gd含有量$x$ & 0 & 0.01 & 0.02 & 0.03 & 0.04 & 0.05 & 0.06 & 0.07 & 0.08 & 0.09 & 0.2 \\
+    \hline
+    粒径(nm) & 14.2 & 14.3 & 14.5 & 14.3 & 14.4 & 14.3 & 14.5 & 14.4 & 14.3 & 14.2 & 13.0 \\
+    \hline
+  \end{tabular}
+\end{table}
+
+\ce{Mn0.8-xZn0.2GdxFe2O4}ナノ微粒子を合成するため以下の試薬をそのまま使用した。\\
+
+\begin{itemize}
+  \item $\ce{FeCl3.6H2O}$ (Wako, 99.0\%)
+  \item $\ce{FeCl2.4H2O}$ (Wako, 99.0\%)
+  \item $\ce{MnCl2.4H2O}$ (Wako, 99.0\%)
+  \item $\ce{ZnCl2}$ (Wako, 99.0\%)
+  \item $\ce{GdCl3.6H2O}$ (Wako, 99.9\%)
+  \item $\ce{NH4OH}$ (Wako, 28.0-30.0\%)
+\end{itemize}
+
+磁気ナノ微粒子の合成には湿式混合法を用いた。% 湿式混合法 参考文献
+\begin{align}
+  \ce{2Fe^{3+} + 3OH^- &-> Fe(OH)3 v} \\
+  \ce{Fe^{2+} + 2OH^- &-> Fe(OH)2 v} \\
+  \ce{Mn^{2+} + 2OH^- &-> Mn(OH)2 v} \\
+  \ce{Zn^{2+} + 2OH^- &-> Zn(OH)2 v} \\
+  \ce{Gd^{3+} + 3OH^- &-> Gd(OH)3 v} \\
+  \ce{Fe(OH)3 + Fe(OH)2 + Mn(OH)2 + Zn(OH)2 + Gd(OH)3 &-> Mn0.8-xZn0.2GdxFe2O4 + byproducts}
+\end{align}
+
+\subsubsection{粉末X線回折測定XRD}
+　作製した磁気ナノ微粒子の結晶構造を調べるため、粉末X線回折測定はRigaku社製のMiniFlex600を用いて行った。
+Cu-Kα線(波長1.5406Å)を用い、管電圧30kV、管電流15mA、測定範囲$2θ = 10°-80°$、ステップ幅0.015°、測定速度$1°/min$で測定を行った。
+試料ホルダーは株式会社リガク製のガラス試料ホルダー(20mm×20mm×0.5mm)を用いた。
+　XRDパターンの解析は、株式会社リガク製のPDXL2を用いて行った。XRDパターンのデータベースは国際結晶データセンター(ICDD)のPDF-4+を用いた。
+
+\subsubsection{蛍光X線分析}
+\subsubsection{X線吸収微細構造解析}
+\subsubsection{磁化測定}
+作製した磁気ナノ微粒子の磁気特性を調べるために超伝導量子干渉装置(SQUID)を用いて行った。
+装置は大阪大学 熱 · エントロピー科学研究センターにある Quantum Design 社製 MPMS-XL、
+東京科学大学 フロンティア材料研究所 川路研究室にある Quantum Design 社製 MPMS-7(AC 測定オプ ション付き)、
+生命ナノシステム科学研究科 山田研究室にある Quantum Design 社製 MPMS-XL を用いた。
+
+
+\subsubsection{磁気ナノ微粒子イメージング}
+
+\newpage
+
+\section{結果及び考察}
+\subsection{粉末X線回折(XRD)}
+\subsubsection{Gdドープ量別Mn-Zn ferriteのXRD}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.6\textwidth]{XRD0-20.png}
+  \caption{Gdドープ量が異なる各サンプルのXRDパターン}
+  \label{fig:XRD}
+\end{figure}
+Gdドープ量が異なる粒径を13-15nmに揃えた各サンプルのXRDパターンを図\ref{fig:MRI}に示した。
+全てのサンプルにおいてXRD測定は連続法で測定を行い、管電圧と管電流は30kV、15mA、または40kV、45mA、ステップ幅0.15°、測定速度2°/min、測定範囲2$\theta = 10°-80°$の条件で測定した。
+全てのサンプルにおいて空間群 Fd-3m(227)で指数付けすることができ、単相のスピネル型構造であることを確認した。
+また、$\theta = 15^\circ -30^\circ $付近においてアモルファス$SiO_2$由来のブロードなピークが確認された。
+粒径の算出は最も強いピーク強度を持つ(311)面においてFP法を適用することで求めた値を採用している。
+　9Dと20Iに関しては、スピネル構造には見られないピークが観察されており、これは$Mn_2Gd_8(SiO4)_6O_2$のに対応するものと考えられ、六方晶構造を持ち空間群はP63/mmc(194)で指数付けを行った。
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.6\textwidth]{XRD0-20.png}
+  \caption{Gd-20のXRDパターン}
+  \label{fig:XRD}
+\end{figure}
+またGdドープによるピーク位置のシフトについて調べた。Braggの式から格子面間隔dが大きくなると、回折角度$\theta$は小さくなる。
+\begin{equation}
+  2d \sin \theta = n \lambda
+\end{equation}
+ここでdは格子面間隔、$\theta$は回折角度、nは回折次数、$\lambda$はX線の波長である。今回作製したサンプルの各金属元素のイオン半径は以下のようになる。
+\begin{table}
+  \caption{\textbf{各金属原子のイオン半径}}\label{tbl:イオン半径}
+  \centering
+  \begin{tabular}{l|ccccc}
+    \hline
+    元素 & 元素名 & 価数・スピン状態 & 配位数 & 有効イオン半径  \\
+    \hline
+    Mn & 0 & 0.01 & 0.02 & 0.03 \\
+    \hline
+    粒径(nm) & 14.2 & 14.3 & 14.5 & 14.3 \\
+    \hline
+  \end{tabular}
+\end{table}
+\ref{tbl:イオン半径}表に示すように、Gd$^{3+}$イオンのイオン半径はMn、Zn、Feの金属イオンより極めて大きいため、Gdドープ量が増加するにつれて低角側にシフトすると考えられる。
+最も回折強度の大きな(311)面におけるピーク位置とピークシフトが大きく出る広角側の比較的大きな(400)面のピークを確認した。
+測定条件は角度分解能を上げるためFT(FixedTime)法で管電圧と管電流40kV,45mA、ステップ幅$0.004^\circ$、測定時間$1.0s$、測定範囲$2\theta = 33^\circ-37^\circ$、$60^\circ-64^\circ$で測定した。
+\begin{figure}[htbp]
+  \centering
+  \begin{minipage}{0.48\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{XRDpeak_311.png}
+  \end{minipage}
+  \hfill
+  \begin{minipage}{0.48\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{XRDpeak_440.png}
+  \end{minipage}
+  \caption{図1：Gdドープ量別Mn-Zn ferriteの(311)面および(440)面ピーク拡大図}
+  \label{fig:compare}
+\end{figure}
+
+
+\subsubsection{XRD}
+　作製したサンプルにおいて、XRD測定を行った。
+\subsubsection{XRF}
+\subsubsection{XAFS}
+
+\section{結論}  
+\section{参考文献}  
+\section{謝辞}
+\section{業績}
+\section{付録:細胞内温度評価の試み}                     
+
+
+\end{document}
